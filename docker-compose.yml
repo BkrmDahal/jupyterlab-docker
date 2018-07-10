@@ -1,10 +1,13 @@
 version: '3'
 services:
   webapp:
-    build: .
+    build:
+      context: .
+      args:
+        - FOLDER=$FOLDER
     image: jupyterlab:0.1
     restart: always
     volumes:
-      - ./notebooks:/notebooks
+      - ./$FOLDER:/$FOLDER
     ports:
       - 8080:8888

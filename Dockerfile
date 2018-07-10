@@ -4,12 +4,12 @@ RUN pip install jupyter -U && pip install jupyterlab && pip install pandas
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
+ARG FOLDER
+
 # Copy sample notebooks.
-COPY notebooks /notebooks
+COPY $FOLDER /$FOLDER
 
-WORKDIR /notebooks
-
-COPY requirements.txt /notebooks/requirements.txt
+WORKDIR /$FOLDER
 
 RUN pip install -r requirements.txt
 
