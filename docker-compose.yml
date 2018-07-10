@@ -1,0 +1,9 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    image: jupyterlab:0.1
+    volumes:
+      - ./notebooks:/notebooks
+    ports:
+      - 8080:8888
