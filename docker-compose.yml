@@ -3,6 +3,7 @@ services:
   webapp:
     build: .
     image: jupyterlab:0.1
+    restart: always
     volumes:
       - ./notebooks:/notebooks
     ports:
