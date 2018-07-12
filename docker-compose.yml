@@ -5,6 +5,7 @@ services:
       context: .
       args:
         - FOLDER=$FOLDER
+        - PASSWORD=$PASSWORD
     image: jupyterlab:0.1
     restart: always
     volumes:
