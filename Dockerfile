@@ -4,7 +4,9 @@ RUN pip install jupyter -U && pip install jupyterlab && pip install pandas
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
-ARG FOLDER
+ARG FOLDER PASSWORD
+
+ENV PASSWORD $PASSWORD
 
 # Copy sample notebooks.
 COPY $FOLDER /$FOLDER
