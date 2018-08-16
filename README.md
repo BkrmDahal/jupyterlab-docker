@@ -8,4 +8,5 @@ Docker file for jupyter lab
 # gist to  download and start jupyter lab
 > https://gist.github.com/BkrmDahal/dab3d5c5f7527334ded2963a72b7903e
 
-8888 port is forwarded to 8080, so you can do http://localhost:8080 .
+# URl
+http://localhost:8888
