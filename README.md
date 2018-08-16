@@ -10,7 +10,7 @@ Docker file for jupyter lab  with python 3.6
 
 ```
   
-# gist to  download and start from docker hub
+# gist to  download and start running
 > https://gist.github.com/BkrmDahal/dab3d5c5f7527334ded2963a72b7903e
 
 # URl
