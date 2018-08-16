@@ -3,7 +3,7 @@ Docker file for jupyter lab  with python 3.6
 
 # Run
 ```bash
- bash docker_install.sh
+ bash docker_install.sh # install docker in ubuntu for other platform, skip this and check offical install guide.
  bash start.sh # start with default setting
  OR. 
  FOLDER=<<foldername_to_mount_to_docker(Here: notebooks)>> PASSWORD=<<password_for_lab>> docker-compose up
