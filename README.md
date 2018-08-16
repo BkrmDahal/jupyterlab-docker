@@ -4,9 +4,9 @@ Docker file for jupyter lab  with python 3.6
 # Run
 ```bash
  bash docker_install.sh
- bash start.sh(start with default setting) 
+ bash start.sh # start with default setting
  OR. 
- FOLDER=< foldername to mount to docker(Here: notebooks) > PASSWORD=< password for lab > docker-compose up
+ FOLDER=<<foldername to mount to docker(Here: notebooks)>> PASSWORD=<<password_for_lab>> docker-compose up
 
 ```
   
