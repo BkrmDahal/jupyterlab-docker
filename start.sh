@@ -1,1 +1,1 @@
-FOLDER=notebooks PASSWORD=1234 docker-compose up -d
+FOLDER=notebooks PASSWORD=1234 docker-compose up 

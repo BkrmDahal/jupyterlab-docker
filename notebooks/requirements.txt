@@ -1,2 +1,7 @@
 numpy
 matplotlib
+pytesseract
+pillow
+nltk
+pdf2image
+pyyaml
