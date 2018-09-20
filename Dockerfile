@@ -15,7 +15,7 @@ RUN if [ "${UBUNTU_VERSION}" = "16.04" ]; then \
     && apt-get update \
     && apt-get install tesseract-ocr -y \
     && apt-get install -y python3-pip \
-    && apt-get install poppler-utils \
+    && apt-get install -y poppler-utils \
     && pip3 install jupyter -U && pip3 install jupyterlab && pip3 install pandas \
     && apt-get clean \
     && apt-get autoremove
@@ -33,5 +33,3 @@ COPY $FOLDER /$FOLDER
 WORKDIR /$FOLDER
 
 RUN pip3 install -r requirements.txt
-
-ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
