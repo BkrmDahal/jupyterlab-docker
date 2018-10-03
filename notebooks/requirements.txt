@@ -1,2 +1,5 @@
 numpy
 matplotlib
+selenium
+BeautifulSoup4
+pandas
