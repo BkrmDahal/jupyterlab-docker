@@ -20,14 +20,17 @@ RUN if [ "${UBUNTU_VERSION}" = "16.04" ]; then \
     && apt-get autoremove
     
 # install chrome    
-RUN apt-get install libxss1 libappindicator1 libindicator7 wget \
-  && apt-get install -f \
+RUN apt-get install -y unzip libxss1 libappindicator1 libindicator7 wget \
+  && apt-get install -y -f \
+  && apt-get install -y libgconf2-4 libnss3-1d libxss1 libasound2 fonts-liberation lsb-release xdg-utils \
   && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
   && dpkg -i google-chrome*.deb
   
 RUN wget https://chromedriver.storage.googleapis.com/2.42/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip \
-  && mv chromedriver /usr/local/bin/
+  && mv chromedriver /usr/local/bin/ \
+  && apt-get clean \
+    && apt-get autoremove
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
