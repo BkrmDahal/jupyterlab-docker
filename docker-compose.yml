@@ -8,6 +8,7 @@ services:
         - PASSWORD=$PASSWORD
     image: jupyterlab:0.1
     restart: always
+    command: ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
     volumes:
       - ./$FOLDER:/$FOLDER
     ports:
