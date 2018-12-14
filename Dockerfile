@@ -74,11 +74,11 @@ COPY jupyter_notebook_config.py /root/.jupyter/
 ARG FOLDER
 ARG PASSWORD
 
-ENV PASSWORD $PASSWORD
+ENV PASSWORD 1234
 
 # Copy sample notebooks.
-COPY $FOLDER /$FOLDER
+COPY notebooks /notebooks
 
-WORKDIR /$FOLDER
+WORKDIR /notebooks
 
 RUN pip3 install -r requirements.txt
