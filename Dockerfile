@@ -12,8 +12,7 @@ ENV PASSWORD $PASSWORD
 # Copy sample notebooks.
 COPY $FOLDER /$FOLDER
 
-WORKDIR /$FOLDER
 
-RUN pip install -r requirements.txt
+# RUN pip install -r requirements.txt
 
-ENTRYPOINT ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
+CMD ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
