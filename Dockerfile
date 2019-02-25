@@ -27,5 +27,3 @@ ENV PASSWORD asdf@1234
 RUN mkdir p ~/notebooks
 
 WORKDIR ~/notebooks
-
-RUN pip3 install -r requirements.txt
