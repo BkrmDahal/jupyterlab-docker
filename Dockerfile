@@ -17,6 +17,7 @@ RUN if [ "${UBUNTU_VERSION}" = "16.04" ]; then \
     && apt-get install -y python3-pip \
     && apt-get install -y poppler-utils \
     && pip3 install jupyter -U && pip3 install jupyterlab && pip3 install pandas \
+    && apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 git \
     && apt-get clean \
     && apt-get autoremove
 
