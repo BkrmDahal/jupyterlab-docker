@@ -27,3 +27,5 @@ ENV PASSWORD asdf@1234
 RUN mkdir p ~/notebooks
 
 WORKDIR ~/notebooks
+
+CMD ["jupyter", "lab","--ip=0.0.0.0","--allow-root"]
